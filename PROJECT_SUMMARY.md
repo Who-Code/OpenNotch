@@ -24,7 +24,7 @@ All requirements from the initial specification have been implemented and docume
 - **Location**: `NotchApp/NotchApp/WaveformView.swift`, `NotchApp/NotchApp/MusicMonitor.swift`
 - Four animation styles: Bars, Wave, Circular, Pulse
 - Real-time music playback detection
-- Support for Apple Music and Spotify
+- Support for Apple Music
 - Uses AppleScript for music app integration
 - Smooth, performant animations
 
@@ -290,12 +290,12 @@ open NotchApp.xcodeproj
 
 1. **Hardware Requirement**: Requires MacBook Pro with notch (2021+)
 2. **macOS Version**: Requires macOS 13.0 (Ventura) or later
-3. **Music Players**: Currently supports Apple Music and Spotify only
+3. **Music Players**: Currently supports Apple Music only
 4. **Privacy Detection**: Camera/microphone detection is approximate
 
 ## Future Enhancement Ideas
 
-- Support for more music players (YouTube Music, Tidal, etc.)
+- Support for additional music players (Spotify, Tidal, etc.)
 - More animation styles and effects
 - Keyboard shortcuts for quick actions
 - Notification integration

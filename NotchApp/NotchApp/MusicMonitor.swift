@@ -25,13 +25,6 @@ class MusicMonitor: ObservableObject {
             name: NSNotification.Name("com.apple.Music.playerInfo"),
             object: nil
         )
-        
-        DistributedNotificationCenter.default().addObserver(
-            self,
-            selector: #selector(updatePlaybackInfo),
-            name: NSNotification.Name("com.spotify.client.PlaybackStateChanged"),
-            object: nil
-        )
     }
     
     private func startMonitoring() {
@@ -47,7 +40,6 @@ class MusicMonitor: ObservableObject {
     
     private func checkMusicPlayback() {
         checkAppleMusic()
-        checkSpotify()
     }
     
     private func checkAppleMusic() {
@@ -80,43 +72,7 @@ class MusicMonitor: ObservableObject {
                     self.currentArtist = components[1].isEmpty ? "Unknown Artist" : components[1]
                     self.fetchAppleMusicArtwork()
                 }
-            } else if !self.isPlaying {
-                self.checkIfStopped()
-            }
-        }
-    }
-    
-    private func checkSpotify() {
-        let script = """
-        tell application "System Events"
-            set isRunning to (name of processes) contains "Spotify"
-        end tell
-        
-        if isRunning then
-            tell application "Spotify"
-                if player state is playing then
-                    return name of current track & "|" & artist of current track & "|playing"
-                else
-                    return "||stopped"
-                end if
-            end tell
-        else
-            return "||stopped"
-        end if
-        """
-        
-        executeAppleScript(script) { [weak self] result in
-            guard let self = self, let result = result else { return }
-            
-            let components = result.split(separator: "|").map(String.init)
-            if components.count >= 3 && components[2] == "playing" {
-                DispatchQueue.main.async {
-                    self.isPlaying = true
-                    self.currentTrack = components[0].isEmpty ? "Unknown Track" : components[0]
-                    self.currentArtist = components[1].isEmpty ? "Unknown Artist" : components[1]
-                    self.fetchSpotifyArtwork()
-                }
-            } else if !self.isPlaying {
+            } else {
                 self.checkIfStopped()
             }
         }
@@ -144,12 +100,6 @@ class MusicMonitor: ObservableObject {
             DispatchQueue.main.async {
                 self?.currentArtwork = NSImage(systemSymbolName: "music.note", accessibilityDescription: nil)
             }
-        }
-    }
-    
-    private func fetchSpotifyArtwork() {
-        DispatchQueue.main.async {
-            self.currentArtwork = NSImage(systemSymbolName: "music.note", accessibilityDescription: nil)
         }
     }
     

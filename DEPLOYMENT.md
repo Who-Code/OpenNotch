@@ -215,7 +215,7 @@ FEATURES:
 • Privacy indicators for camera and microphone usage
 • Customizable colors and sizes
 • Seamless integration with the hardware notch
-• Support for Apple Music and Spotify
+• Support for Apple Music
 • Launch at login option
 
 OPEN SOURCE & PRIVACY FIRST:
@@ -243,7 +243,7 @@ Initial release of OpenNotch - the only open source notch app!
 • Privacy indicators for camera and microphone
 • Fully customizable appearance
 • Launch at login support
-• Support for Apple Music and Spotify
+• Support for Apple Music
 ```
 
 ## Code Signing

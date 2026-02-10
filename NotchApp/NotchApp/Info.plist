@@ -27,6 +27,6 @@
 	<key>NSCameraUsageDescription</key>
 	<string>OpenNotch needs camera access to display privacy indicator when camera is in use.</string>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>OpenNotch needs access to control music playback information.</string>
+	<string>OpenNotch needs access to Apple Music playback information to display visualizations.</string>
 </dict>
 </plist>

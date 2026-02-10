@@ -103,7 +103,7 @@ MacOsxNotchApp/
 - Manages expand/collapse animations
 
 #### MusicMonitor.swift
-- Monitors Apple Music and Spotify
+- Monitors Apple Music
 - Uses AppleScript for playback information
 - Publishes music state changes
 
@@ -240,8 +240,7 @@ Before submitting a PR, test the following:
 
 - [ ] App launches successfully
 - [ ] Notch overlay appears in correct position
-- [ ] Music playback detection works (Apple Music)
-- [ ] Music playback detection works (Spotify)
+- [ ] Music playback detected (Apple Music)
 - [ ] Waveform animations display correctly
 - [ ] Hover expansion/collapse works smoothly
 - [ ] Privacy indicator shows when camera/mic active

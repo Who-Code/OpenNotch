@@ -11,7 +11,7 @@ A beautiful macOS utility application that enhances your notch experience with m
 
 ## Features
 
-- 🎵 **Music Visualization**: Beautiful waveform animations that respond to music playback from Apple Music and Spotify
+- 🎵 **Music Visualization**: Beautiful waveform animations that respond to music playback from Apple Music
 - 🔒 **Privacy Indicators**: Orange dot indicator when camera or microphone is accessed
 - 🎨 **Customizable Appearance**: Choose from multiple animation styles and customize colors
 - 📏 **Adjustable Size**: Configure the expanded notch dimensions to your preference
@@ -81,8 +81,6 @@ Click the OpenNotch icon in the menu bar to access:
 ### Supported Music Players
 
 - Apple Music
-- Spotify
-- Any media player that broadcasts playback information
 
 ## Privacy
 
@@ -100,9 +98,9 @@ OpenNotch respects your privacy:
 - Try quitting and relaunching the app
 
 ### Music information not showing
-- Make sure Apple Music or Spotify is running
+- Make sure Apple Music is running
 - Grant Automation permissions in System Settings > Privacy & Security > Automation
-- Restart the music player and OpenNotch
+- Restart Apple Music and OpenNotch
 
 ### Privacy indicator not working
 - Grant Camera and Microphone permissions in System Settings > Privacy & Security
@@ -155,7 +153,7 @@ If you encounter any issues or have questions:
 - Customizable appearance
 - Launch at login support
 - Settings interface
-- Support for Apple Music and Spotify
+- Support for Apple Music
 
 ---
 

@@ -50,7 +50,7 @@ Grant these permissions in **System Settings > Privacy & Security**.
 
 ### Test Music Visualization
 
-1. Open **Apple Music** or **Spotify**
+1. Open **Apple Music**
 2. Play a song
 3. Watch the waveform animation appear in the notch
 
@@ -87,7 +87,7 @@ Grant these permissions in **System Settings > Privacy & Security**.
 
 ### Music not detected
 - Grant Automation permissions in System Settings
-- Restart Apple Music or Spotify
+- Restart Apple Music
 - Restart OpenNotch
 
 ## Project Structure
