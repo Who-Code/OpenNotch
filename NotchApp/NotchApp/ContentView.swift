@@ -8,7 +8,8 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color.black
+            // Semi-transparent background so it's visible
+            Color.black.opacity(0.8)
             
             if isHovering {
                 expandedView
@@ -17,6 +18,10 @@ struct ContentView: View {
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: isHovering ? 20 : 16))
+        .overlay(
+            RoundedRectangle(cornerRadius: isHovering ? 20 : 16)
+                .stroke(Color.white.opacity(0.3), lineWidth: 1)
+        )
         .onHover { hovering in
             withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                 isHovering = hovering
@@ -36,10 +41,15 @@ struct ContentView: View {
                 WaveformView(isCompact: true)
                     .frame(width: 200, height: 24)
             } else {
-                // Show a subtle indicator when no music is playing
-                Circle()
-                    .fill(Color.white.opacity(0.1))
-                    .frame(width: 6, height: 6)
+                // Show a visible indicator when no music is playing
+                HStack(spacing: 4) {
+                    Circle()
+                        .fill(Color.white.opacity(0.4))
+                        .frame(width: 6, height: 6)
+                    Text("OpenNotch")
+                        .font(.caption2)
+                        .foregroundColor(.white.opacity(0.5))
+                }
             }
             
             Spacer()
