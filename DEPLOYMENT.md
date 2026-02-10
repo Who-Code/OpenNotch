@@ -1,6 +1,8 @@
-# Deployment Guide for NotchApp
+# Deployment Guide for OpenNotch
 
-This guide covers building, archiving, and deploying NotchApp to the Mac App Store.
+This guide covers building, archiving, and deploying OpenNotch to the Mac App Store.
+
+**OpenNotch** is the only open source, completely free, ad-free notch app for macOS.
 
 ## Table of Contents
 
@@ -140,16 +142,16 @@ The Release configuration includes:
    - Click "+" and select "New App"
    - Fill in the details:
      - Platform: macOS
-     - Name: NotchApp
+     - Name: OpenNotch
      - Primary Language: English
-     - Bundle ID: com.notchapp.NotchApp
-     - SKU: notchapp-001
+     - Bundle ID: com.whocode.OpenNotch
+     - SKU: opennotch-001
 
 2. **App Information**
    
    Fill in required fields:
-   - **Name**: NotchApp
-   - **Subtitle**: Music Visualization for Your Notch
+   - **Name**: OpenNotch
+   - **Subtitle**: Open Source Music Visualization for Your Notch
    - **Category**: Utilities
    - **Secondary Category**: Music (optional)
 
@@ -163,8 +165,9 @@ The Release configuration includes:
 4. **App Privacy**
    
    Declare data collection:
-   - NotchApp does not collect any data
+   - OpenNotch does not collect any data
    - Select "No, this app does not collect data"
+   - Emphasize open source nature and privacy-first approach
 
 ### Required Assets
 
@@ -202,7 +205,9 @@ Write compelling copy:
 
 **Description** (4000 characters max):
 ```
-NotchApp transforms your MacBook's notch into a beautiful, functional display that shows music visualizations and privacy indicators.
+OpenNotch - The only open source, completely free, ad-free notch app for macOS!
+
+Transform your MacBook's notch into a beautiful, functional display that shows music visualizations and privacy indicators.
 
 FEATURES:
 • Beautiful waveform animations that respond to your music
@@ -213,8 +218,10 @@ FEATURES:
 • Support for Apple Music and Spotify
 • Launch at login option
 
-PRIVACY FIRST:
-NotchApp respects your privacy. All processing happens locally on your device. No data is collected or transmitted.
+OPEN SOURCE & PRIVACY FIRST:
+OpenNotch is 100% open source and respects your privacy. All processing happens locally on your device. No data is collected or transmitted. No ads, no tracking, no subscriptions.
+
+Source code: https://github.com/Who-Code/OpenNotch
 
 REQUIREMENTS:
 • macOS 13.0 or later
@@ -225,12 +232,12 @@ Transform your notch today!
 
 **Keywords** (100 characters max):
 ```
-notch,music,visualizer,waveform,privacy,indicator,utility,menubar,dynamic
+notch,music,visualizer,waveform,privacy,open source,free,utility,menubar
 ```
 
 **What's New** (4000 characters max):
 ```
-Initial release of NotchApp!
+Initial release of OpenNotch - the only open source notch app!
 
 • Music visualization with 4 animation styles
 • Privacy indicators for camera and microphone
@@ -376,7 +383,7 @@ Common validation issues:
    - Demo account (if needed)
    - Notes for reviewer:
      ```
-     NotchApp is a utility that overlays the MacBook notch.
+     OpenNotch is an open source utility that overlays the MacBook notch.
      
      To test:
      1. Launch the app

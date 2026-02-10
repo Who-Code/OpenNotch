@@ -73,13 +73,18 @@ struct BehaviorSettings: View {
             }
             
             Section(header: Text("Information").font(.headline)) {
-                Text("NotchApp runs in the background and displays a visual overlay at the top of your screen.")
+                Text("OpenNotch runs in the background and displays a visual overlay at the top of your screen.")
                     .font(.caption)
                     .foregroundColor(.secondary)
                 
                 Text("The app shows waveform animations when music is playing and displays privacy indicators when your camera or microphone is in use.")
                     .font(.caption)
                     .foregroundColor(.secondary)
+                
+                Text("100% open source, completely free, and ad-free.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fontWeight(.semibold)
             }
         }
         .formStyle(.grouped)
@@ -108,7 +113,7 @@ struct AboutView: View {
                 .font(.system(size: 60))
                 .foregroundColor(.accentColor)
             
-            Text("NotchApp")
+            Text("OpenNotch")
                 .font(.title)
                 .fontWeight(.bold)
             
@@ -116,15 +121,25 @@ struct AboutView: View {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             
-            Text("A beautiful notch overlay for macOS that displays music playback and privacy indicators.")
+            Text("The only open source, completely free, ad-free notch app for macOS.")
+                .multilineTextAlignment(.center)
+                .font(.body)
+                .foregroundColor(.secondary)
+                .fontWeight(.semibold)
+                .padding(.horizontal, 40)
+            
+            Text("A beautiful notch overlay that displays music playback and privacy indicators.")
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .foregroundColor(.secondary)
                 .padding(.horizontal, 40)
             
+            Link("GitHub: Who-Code/OpenNotch", destination: URL(string: "https://github.com/Who-Code/OpenNotch")!)
+                .font(.caption)
+            
             Spacer()
             
-            Text("© 2026 NotchApp")
+            Text("© 2026 OpenNotch - Open Source Project")
                 .font(.caption)
                 .foregroundColor(.secondary)
         }

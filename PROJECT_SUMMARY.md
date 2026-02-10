@@ -1,4 +1,8 @@
-# NotchApp - Project Summary
+# OpenNotch - Project Summary
+
+**The only open source, completely free, ad-free notch app for macOS**
+
+**GitHub Repository**: https://github.com/Who-Code/OpenNotch
 
 ## Project Status: ✅ COMPLETE
 
@@ -10,6 +14,7 @@ All requirements from the initial specification have been implemented and docume
 
 #### 1. Notch Overlay Application ✅
 - **Location**: `NotchApp/NotchApp/NotchOverlayWindow.swift`
+- Open source implementation
 - Custom NSWindow that overlays the hardware notch
 - Black background that seamlessly blends with the notch
 - Positioned at the top center of the screen
@@ -56,11 +61,12 @@ All requirements from the initial specification have been implemented and docume
 - Automatic registration/unregistration
 
 #### 7. Background Operation ✅
-- **Location**: `NotchApp/NotchApp/NotchAppApp.swift`
+- **Location**: `NotchApp/NotchApp/OpenNotchApp.swift`
 - Runs as menu bar utility (LSUIElement = YES)
 - No dock icon
 - Minimal resource usage
 - Always-on-top window level
+- Completely free and open source
 
 ### Technical Architecture
 
@@ -71,7 +77,7 @@ All requirements from the initial specification have been implemented and docume
 
 #### Key Classes
 
-1. **NotchAppApp.swift**
+1. **OpenNotchApp.swift**
    - App entry point
    - AppDelegate for lifecycle management
    - Status bar menu setup
@@ -142,7 +148,7 @@ MacOsxNotchApp/
 └── NotchApp/
     ├── NotchApp.xcodeproj/     # Xcode project
     └── NotchApp/               # Source code
-        ├── NotchAppApp.swift
+        ├── OpenNotchApp.swift
         ├── AppSettings.swift
         ├── NotchOverlayWindow.swift
         ├── ContentView.swift
@@ -344,7 +350,7 @@ open NotchApp.xcodeproj
 
 ## Conclusion
 
-NotchApp is a fully functional macOS utility application that meets all specified requirements. The project includes:
+**OpenNotch** is a fully functional, open source macOS utility application that meets all specified requirements. The project includes:
 
 - ✅ Complete source code
 - ✅ Xcode project configuration
@@ -357,10 +363,13 @@ The application is ready for:
 1. Development and testing
 2. Further customization
 3. App Store submission (after adding team/certificates)
-4. Open source distribution
+4. Open source distribution on GitHub: https://github.com/Who-Code/OpenNotch
 
-**Status**: Production-ready, fully documented, and deployment-ready.
+**Status**: Production-ready, fully documented, deployment-ready, and 100% open source.
+
+**Repository**: https://github.com/Who-Code/OpenNotch
 
 ---
 
 *Project completed: February 10, 2026*
+*The only open source, completely free, ad-free notch app for macOS*

@@ -1,6 +1,8 @@
 # Quick Start Guide
 
-Get NotchApp up and running in minutes!
+Get OpenNotch up and running in minutes!
+
+**OpenNotch** - The only open source, completely free, ad-free notch app for macOS.
 
 ## Prerequisites
 
@@ -25,7 +27,7 @@ open NotchApp.xcodeproj
 
 ### 3. Configure Signing
 
-1. Select the **NotchApp** target in Xcode
+1. Select the **OpenNotch** target in Xcode
 2. Go to **Signing & Capabilities** tab
 3. Select your **Team** from the dropdown
 4. Xcode will automatically manage signing
@@ -74,7 +76,7 @@ Grant these permissions in **System Settings > Privacy & Security**.
 
 ## Common Issues
 
-### "NotchApp wants to control Music"
+### "OpenNotch wants to control Music"
 - Click **OK** to allow music playback detection
 - This is required for the waveform feature
 
@@ -86,7 +88,7 @@ Grant these permissions in **System Settings > Privacy & Security**.
 ### Music not detected
 - Grant Automation permissions in System Settings
 - Restart Apple Music or Spotify
-- Restart NotchApp
+- Restart OpenNotch
 
 ## Project Structure
 
@@ -95,7 +97,7 @@ MacOsxNotchApp/
 ├── NotchApp/                    # Xcode project
 │   ├── NotchApp.xcodeproj/     # Project file
 │   └── NotchApp/               # Source code
-│       ├── NotchAppApp.swift   # App entry point
+│       ├── OpenNotchApp.swift  # App entry point
 │       ├── ContentView.swift   # Main UI
 │       ├── WaveformView.swift  # Animations
 │       ├── MusicMonitor.swift  # Music detection
@@ -130,8 +132,9 @@ Product > Clean Build Folder (Cmd + Shift + K)
 
 ## Getting Help
 
-- Check existing [GitHub Issues](https://github.com/yourusername/NotchApp/issues)
+- Check existing [GitHub Issues](https://github.com/Who-Code/OpenNotch/issues)
 - Read the full [README.md](README.md)
 - Review [CONTRIBUTING.md](CONTRIBUTING.md)
+- Join our open source community!
 
 Happy coding! 🎉

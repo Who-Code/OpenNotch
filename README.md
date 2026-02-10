@@ -1,10 +1,13 @@
-# NotchApp
+# OpenNotch
+
+**The only open source, completely free, ad-free notch app for macOS**
 
 A beautiful macOS utility application that enhances your notch experience with music visualization and privacy indicators.
 
 ![macOS](https://img.shields.io/badge/macOS-13.0+-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Open Source](https://img.shields.io/badge/Open%20Source-100%25-brightgreen.svg)
 
 ## Features
 
@@ -37,7 +40,7 @@ Customize colors, animation styles, and notch dimensions.
 
 ### From Release (Coming Soon)
 
-1. Download the latest release from the [Releases](https://github.com/yourusername/NotchApp/releases) page
+1. Download the latest release from the [Releases](https://github.com/Who-Code/OpenNotch/releases) page
 2. Open the `.dmg` file
 3. Drag NotchApp to your Applications folder
 4. Launch NotchApp from Applications
@@ -51,7 +54,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed build instructions.
 
 ### First Launch
 
-1. Launch NotchApp from your Applications folder
+1. Launch OpenNotch from your Applications folder
 2. The app will appear in your menu bar with a waveform icon
 3. Grant permissions for:
    - Accessibility (for detecting music playback)
@@ -60,7 +63,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed build instructions.
 
 ### Menu Bar
 
-Click the NotchApp icon in the menu bar to access:
+Click the OpenNotch icon in the menu bar to access:
 - **Settings**: Customize appearance and behavior
 - **Quit**: Exit the application
 
@@ -73,7 +76,7 @@ Click the NotchApp icon in the menu bar to access:
 - **Expanded Height**: Adjust the height when hovering (80-200px)
 
 #### Behavior Tab
-- **Launch at Login**: Automatically start NotchApp when you log in
+- **Launch at Login**: Automatically start OpenNotch when you log in
 
 ### Supported Music Players
 
@@ -83,7 +86,7 @@ Click the NotchApp icon in the menu bar to access:
 
 ## Privacy
 
-NotchApp respects your privacy:
+OpenNotch respects your privacy:
 - No data is collected or transmitted
 - All processing happens locally on your device
 - Camera and microphone permissions are only used to detect when they're active
@@ -93,13 +96,13 @@ NotchApp respects your privacy:
 
 ### The notch overlay doesn't appear
 - Ensure you're using a Mac with a notch
-- Check that NotchApp is running (look for the icon in the menu bar)
+- Check that OpenNotch is running (look for the icon in the menu bar)
 - Try quitting and relaunching the app
 
 ### Music information not showing
 - Make sure Apple Music or Spotify is running
 - Grant Automation permissions in System Settings > Privacy & Security > Automation
-- Restart the music player and NotchApp
+- Restart the music player and OpenNotch
 
 ### Privacy indicator not working
 - Grant Camera and Microphone permissions in System Settings > Privacy & Security
@@ -107,7 +110,7 @@ NotchApp respects your privacy:
 
 ### Launch at login not working
 - Check System Settings > General > Login Items
-- Ensure NotchApp is listed and enabled
+- Ensure OpenNotch is listed and enabled
 - On macOS 13+, this should be managed automatically
 
 ## Contributing
@@ -135,11 +138,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by the iPhone Dynamic Island
 - Built with SwiftUI and AppKit
 - Icons from SF Symbols
+- 100% open source and community-driven
 
 ## Support
 
 If you encounter any issues or have questions:
-- Open an issue on [GitHub](https://github.com/yourusername/NotchApp/issues)
+- Open an issue on [GitHub](https://github.com/Who-Code/OpenNotch/issues)
 - Check existing issues for solutions
 - Read the documentation thoroughly
 

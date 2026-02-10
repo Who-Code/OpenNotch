@@ -2,7 +2,7 @@ import SwiftUI
 import ServiceManagement
 
 @main
-struct NotchAppApp: App {
+struct OpenNotchApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var settings = AppSettings.shared
     
@@ -33,13 +33,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         
         if let button = statusItem?.button {
-            button.image = NSImage(systemSymbolName: "waveform", accessibilityDescription: "NotchApp")
+            button.image = NSImage(systemSymbolName: "waveform", accessibilityDescription: "OpenNotch")
         }
         
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Settings...", action: #selector(openSettings), keyEquivalent: ","))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit NotchApp", action: #selector(quitApp), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "Quit OpenNotch", action: #selector(quitApp), keyEquivalent: "q"))
         
         statusItem?.menu = menu
     }

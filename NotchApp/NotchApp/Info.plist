@@ -23,10 +23,10 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>NotchApp needs microphone access to display privacy indicator when microphone is in use.</string>
+	<string>OpenNotch needs microphone access to display privacy indicator when microphone is in use.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>NotchApp needs camera access to display privacy indicator when camera is in use.</string>
+	<string>OpenNotch needs camera access to display privacy indicator when camera is in use.</string>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>NotchApp needs access to control music playback information.</string>
+	<string>OpenNotch needs access to control music playback information.</string>
 </dict>
 </plist>

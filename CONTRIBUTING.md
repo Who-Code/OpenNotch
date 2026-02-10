@@ -1,6 +1,8 @@
-# Contributing to NotchApp
+# Contributing to OpenNotch
 
-Thank you for your interest in contributing to NotchApp! This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to OpenNotch! This document provides guidelines and instructions for contributing to the project.
+
+**OpenNotch is the only open source, completely free, ad-free notch app for macOS. Your contributions help keep it that way!**
 
 ## Table of Contents
 
@@ -33,13 +35,13 @@ By participating in this project, you agree to maintain a respectful and inclusi
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/yourusername/NotchApp.git
-   cd NotchApp
+   git clone https://github.com/yourusername/OpenNotch.git
+   cd OpenNotch
    ```
 
 3. Add the upstream repository:
    ```bash
-   git remote add upstream https://github.com/originalowner/NotchApp.git
+   git remote add upstream https://github.com/Who-Code/OpenNotch.git
    ```
 
 ## Development Setup
@@ -72,10 +74,10 @@ On first build, you may need to:
 ## Project Structure
 
 ```
-NotchApp/
+MacOsxNotchApp/
 ├── NotchApp.xcodeproj/          # Xcode project file
 └── NotchApp/                    # Source code
-    ├── NotchAppApp.swift        # App entry point and delegate
+    ├── OpenNotchApp.swift       # App entry point and delegate
     ├── AppSettings.swift        # User settings and preferences
     ├── NotchOverlayWindow.swift # Main overlay window
     ├── ContentView.swift        # Main content view
@@ -90,7 +92,7 @@ NotchApp/
 
 ### Key Components
 
-#### NotchAppApp.swift
+#### OpenNotchApp.swift
 - App lifecycle management
 - Status bar menu setup
 - Window initialization
@@ -341,7 +343,7 @@ If applicable, add screenshots
 **Environment:**
 - macOS Version: [e.g., 13.5]
 - Mac Model: [e.g., MacBook Pro 14" 2021]
-- NotchApp Version: [e.g., 1.0.0]
+- OpenNotch Version: [e.g., 1.0.0]
 
 **Additional Context**
 Any other relevant information
@@ -415,4 +417,6 @@ If you have questions about contributing:
 - Check existing documentation
 - Review closed issues for similar questions
 
-Thank you for contributing to NotchApp! 🎉
+Thank you for contributing to OpenNotch! 🎉
+
+Together, we're building the best open source notch utility for macOS!
