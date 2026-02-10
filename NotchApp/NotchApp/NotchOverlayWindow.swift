@@ -30,12 +30,18 @@ class NotchOverlayWindow: NSWindow {
         self.backgroundColor = .clear
         self.hasShadow = false
         self.ignoresMouseEvents = false
+        self.isMovable = false
+        self.isReleasedWhenClosed = false
         
         let contentView = ContentView(window: self)
         hostingView = NSHostingView(rootView: contentView)
         self.contentView = hostingView
         
         setupTrackingArea()
+        
+        // Make window visible
+        self.makeKeyAndOrderFront(nil)
+        self.orderFrontRegardless()
     }
     
     private func setupTrackingArea() {

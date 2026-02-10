@@ -46,7 +46,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func setupNotchWindow() {
         notchWindow = NotchOverlayWindow()
+        notchWindow?.makeKeyAndOrderFront(nil)
         notchWindow?.orderFrontRegardless()
+        
+        // Debug: Print window info
+        if let window = notchWindow {
+            print("✅ NotchWindow created at frame: \(window.frame)")
+            print("✅ Window is visible: \(window.isVisible)")
+            print("✅ Window level: \(window.level.rawValue)")
+        }
     }
     
     @objc private func openSettings() {

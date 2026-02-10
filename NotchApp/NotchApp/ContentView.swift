@@ -35,6 +35,11 @@ struct ContentView: View {
             if musicMonitor.isPlaying {
                 WaveformView(isCompact: true)
                     .frame(width: 200, height: 24)
+            } else {
+                // Show a subtle indicator when no music is playing
+                Circle()
+                    .fill(Color.white.opacity(0.1))
+                    .frame(width: 6, height: 6)
             }
             
             Spacer()
@@ -42,6 +47,7 @@ struct ContentView: View {
             PrivacyIndicator()
         }
         .padding(.horizontal, 12)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
     private var expandedView: some View {
