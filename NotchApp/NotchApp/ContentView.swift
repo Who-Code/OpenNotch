@@ -8,8 +8,8 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            // Semi-transparent background so it's visible
-            Color.black.opacity(0.8)
+            // Bright background for debugging - VERY VISIBLE
+            Color.red.opacity(0.8)
             
             if isHovering {
                 expandedView

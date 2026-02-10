@@ -45,6 +45,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func setupNotchWindow() {
+        // Debug: Print screen info BEFORE creating window
+        if let screen = NSScreen.main {
+            print("🖥️ Main screen frame: \(screen.frame)")
+            print("🖥️ Main screen visible frame: \(screen.visibleFrame)")
+            if #available(macOS 12.0, *) {
+                print("🖥️ Main screen safe area insets: \(screen.safeAreaInsets)")
+            }
+        }
+        
         notchWindow = NotchOverlayWindow()
         notchWindow?.makeKeyAndOrderFront(nil)
         notchWindow?.orderFrontRegardless()
@@ -54,6 +63,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("✅ NotchWindow created at frame: \(window.frame)")
             print("✅ Window is visible: \(window.isVisible)")
             print("✅ Window level: \(window.level.rawValue)")
+            print("✅ Window alpha: \(window.alphaValue)")
+            print("✅ Window is on screen: \(window.isOnActiveSpace)")
         }
     }
     
