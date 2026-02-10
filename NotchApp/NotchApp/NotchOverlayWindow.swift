@@ -7,7 +7,7 @@ class NotchOverlayWindow: NSWindow {
     private let notchWidth: CGFloat = 300
     
     init() {
-        let screen = NSScreen.main ?? NSScreen.screens[0]
+        let screen = NotchOverlayWindow.getBuiltInScreen()
         let screenFrame = screen.frame
         
         let windowRect = NSRect(
@@ -50,7 +50,7 @@ class NotchOverlayWindow: NSWindow {
     
     func expand() {
         let settings = AppSettings.shared
-        let screen = NSScreen.main ?? NSScreen.screens[0]
+        let screen = NotchOverlayWindow.getBuiltInScreen()
         let screenFrame = screen.frame
         
         let newHeight = settings.expandedHeight
@@ -71,7 +71,7 @@ class NotchOverlayWindow: NSWindow {
     }
     
     func collapse() {
-        let screen = NSScreen.main ?? NSScreen.screens[0]
+        let screen = NotchOverlayWindow.getBuiltInScreen()
         let screenFrame = screen.frame
         
         let newFrame = NSRect(
