@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1000001000000000000001 /* NotchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002000000000000001 /* NotchAppApp.swift */; };
+		A1000001000000000000001 /* OpenNotchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002000000000000001 /* OpenNotchApp.swift */; };
 		A1000003000000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004000000000000001 /* ContentView.swift */; };
 		A1000005000000000000001 /* NotchOverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006000000000000001 /* NotchOverlayWindow.swift */; };
 		A1000007000000000000001 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000008000000000000001 /* WaveformView.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A1000019000000000000001 /* NotchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1000002000000000000001 /* NotchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchAppApp.swift; sourceTree = "<group>"; };
+		A1000002000000000000001 /* OpenNotchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotchApp.swift; sourceTree = "<group>"; };
 		A1000004000000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1000006000000000000001 /* NotchOverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchOverlayWindow.swift; sourceTree = "<group>"; };
 		A1000008000000000000001 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		A1000024000000000000001 /* NotchApp */ = {
 			isa = PBXGroup;
 			children = (
-				A1000002000000000000001 /* NotchAppApp.swift */,
+				A1000002000000000000001 /* OpenNotchApp.swift */,
 				A1000004000000000000001 /* ContentView.swift */,
 				A1000006000000000000001 /* NotchOverlayWindow.swift */,
 				A1000008000000000000001 /* WaveformView.swift */,
