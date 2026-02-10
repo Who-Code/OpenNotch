@@ -1,5 +1,4 @@
 import SwiftUI
-import AVFoundation
 
 struct PrivacyIndicator: View {
     @State private var isCameraActive = false
@@ -72,10 +71,26 @@ struct PrivacyIndicator: View {
     }
     
     private func checkMicrophoneStatus() {
-        let audioSession = AVAudioSession.sharedInstance()
+        let script = """
+        tell application "System Events"
+            set micApps to name of every process whose background only is false
+            set micActive to false
+            
+            repeat with appName in micApps
+                if appName contains "FaceTime" or appName contains "Zoom" or appName contains "Teams" or appName contains "Skype" or appName contains "Discord" or appName contains "Slack" then
+                    set micActive to true
+                    exit repeat
+                end if
+            end repeat
+            
+            return micActive
+        end tell
+        """
         
-        DispatchQueue.main.async {
-            self.isMicrophoneActive = audioSession.isOtherAudioPlaying
+        executeAppleScript(script) { result in
+            DispatchQueue.main.async {
+                self.isMicrophoneActive = result == "true"
+            }
         }
     }
     
