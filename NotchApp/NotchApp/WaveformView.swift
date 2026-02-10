@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 
 struct WaveformView: View {
     @StateObject private var settings = AppSettings.shared
@@ -54,7 +55,7 @@ struct WaveformView: View {
                 
                 for x in stride(from: 0, through: width, by: 5) {
                     let relativeX = x / width
-                    let sine = sin((relativeX * 4 * .pi) + animationPhase)
+                    let sine = Darwin.sin((relativeX * 4 * .pi) + animationPhase)
                     let y = midHeight + (sine * midHeight * 0.6)
                     path.addLine(to: CGPoint(x: x, y: y))
                 }
@@ -74,7 +75,7 @@ struct WaveformView: View {
                 Circle()
                     .stroke(settings.waveformColor.opacity(0.3 + Double(ring) * 0.2), lineWidth: 2)
                     .frame(width: circleSize(for: ring), height: circleSize(for: ring))
-                    .scaleEffect(1 + sin(animationPhase + Double(ring) * 0.5) * 0.2)
+                    .scaleEffect(1 + Darwin.sin(animationPhase + Double(ring) * 0.5) * 0.2)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -84,14 +85,14 @@ struct WaveformView: View {
         Circle()
             .fill(settings.waveformColor)
             .frame(width: isCompact ? 20 : 40, height: isCompact ? 20 : 40)
-            .scaleEffect(1 + sin(animationPhase) * 0.3)
-            .opacity(0.7 + sin(animationPhase) * 0.3)
+            .scaleEffect(1 + Darwin.sin(animationPhase) * 0.3)
+            .opacity(0.7 + Darwin.sin(animationPhase) * 0.3)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
     private func barHeight(for index: Int, maxHeight: CGFloat) -> CGFloat {
         let normalizedIndex = CGFloat(index) / CGFloat(barCount)
-        let sine = sin(normalizedIndex * .pi * 2 + animationPhase)
+        let sine = Darwin.sin(normalizedIndex * .pi * 2 + animationPhase)
         let height = (sine + 1) / 2
         return max(maxHeight * 0.2, height * maxHeight)
     }
