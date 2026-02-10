@@ -23,9 +23,7 @@ struct ContentView: View {
                 .stroke(Color.white.opacity(0.3), lineWidth: 1)
         )
         .onHover { hovering in
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                isHovering = hovering
-            }
+            isHovering = hovering
             
             if hovering {
                 window?.expand()
