@@ -10,9 +10,18 @@ class NotchOverlayWindow: NSWindow {
         let screen = NotchOverlayWindow.getBuiltInScreen()
         let screenFrame = screen.frame
         
+        print("📍 Using screen frame: \(screenFrame)")
+        print("📍 Screen origin: (\(screenFrame.origin.x), \(screenFrame.origin.y))")
+        
+        // Calculate center position relative to screen's coordinate space
+        let centerX = screenFrame.origin.x + (screenFrame.width - notchWidth) / 2
+        let topY = screenFrame.origin.y + screenFrame.height - notchHeight
+        
+        print("📍 Calculated window position: (\(centerX), \(topY))")
+        
         let windowRect = NSRect(
-            x: (screenFrame.width - notchWidth) / 2,
-            y: screenFrame.height - notchHeight,
+            x: centerX,
+            y: topY,
             width: notchWidth,
             height: notchHeight
         )
@@ -96,8 +105,8 @@ class NotchOverlayWindow: NSWindow {
         let newWidth = settings.expandedWidth
         
         let newFrame = NSRect(
-            x: (screenFrame.width - newWidth) / 2,
-            y: screenFrame.height - newHeight,
+            x: screenFrame.origin.x + (screenFrame.width - newWidth) / 2,
+            y: screenFrame.origin.y + screenFrame.height - newHeight,
             width: newWidth,
             height: newHeight
         )
@@ -114,8 +123,8 @@ class NotchOverlayWindow: NSWindow {
         let screenFrame = screen.frame
         
         let newFrame = NSRect(
-            x: (screenFrame.width - notchWidth) / 2,
-            y: screenFrame.height - notchHeight,
+            x: screenFrame.origin.x + (screenFrame.width - notchWidth) / 2,
+            y: screenFrame.origin.y + screenFrame.height - notchHeight,
             width: notchWidth,
             height: notchHeight
         )
