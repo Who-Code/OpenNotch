@@ -42,6 +42,18 @@ class NotchOverlayWindow: NSWindow {
         // Make window visible
         self.makeKeyAndOrderFront(nil)
         self.orderFrontRegardless()
+        
+        // Enable mouse events
+        self.acceptsMouseMovedEvents = true
+    }
+    
+    // Override to allow borderless window to become key and receive events
+    override var canBecomeKey: Bool {
+        return true
+    }
+    
+    override var canBecomeMain: Bool {
+        return false
     }
     
     private func setupTrackingArea() {
