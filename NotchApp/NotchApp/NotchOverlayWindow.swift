@@ -48,6 +48,27 @@ class NotchOverlayWindow: NSWindow {
         self.contentView?.addTrackingArea(trackingArea)
     }
     
+    private static func getBuiltInScreen() -> NSScreen {
+        // Try to find the built-in display (the one with the notch)
+        // Built-in displays typically have specific characteristics:
+        // 1. They are the main screen when no external displays are connected
+        // 2. They have a safeAreaInsets.top > 0 (for the notch)
+        // 3. They are usually the screen with the highest pixel density
+        
+        // First, check for screen with notch (safeAreaInsets.top > 0)
+        if #available(macOS 12.0, *) {
+            for screen in NSScreen.screens {
+                if screen.safeAreaInsets.top > 0 {
+                    return screen
+                }
+            }
+        }
+        
+        // Fallback: Use main screen (which is typically the built-in display)
+        // or the first screen if main is nil
+        return NSScreen.main ?? NSScreen.screens.first ?? NSScreen.screens[0]
+    }
+    
     func expand() {
         let settings = AppSettings.shared
         let screen = NotchOverlayWindow.getBuiltInScreen()
