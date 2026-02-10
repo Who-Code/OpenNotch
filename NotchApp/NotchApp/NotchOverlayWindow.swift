@@ -5,10 +5,12 @@ class NotchOverlayWindow: NSWindow {
     private var hostingView: NSHostingView<ContentView>?
     private let notchHeight: CGFloat = 32
     private let notchWidth: CGFloat = 300
+    private let targetScreen: NSScreen
     
     init() {
-        let screen = NotchOverlayWindow.getBuiltInScreen()
-        let screenFrame = screen.frame
+        // Cache the screen reference to avoid repeated lookups
+        self.targetScreen = NotchOverlayWindow.getBuiltInScreen()
+        let screenFrame = targetScreen.frame
         
         print("📍 Using screen frame: \(screenFrame)")
         print("📍 Screen origin: (\(screenFrame.origin.x), \(screenFrame.origin.y))")
@@ -92,14 +94,12 @@ class NotchOverlayWindow: NSWindow {
         }
         
         print("⚠️ No screen with notch found, using main screen as fallback")
-        // Fallback: Use main screen or first screen
         return NSScreen.main ?? NSScreen.screens.first ?? NSScreen.screens[0]
     }
     
     func expand() {
         let settings = AppSettings.shared
-        let screen = NotchOverlayWindow.getBuiltInScreen()
-        let screenFrame = screen.frame
+        let screenFrame = targetScreen.frame
         
         let newHeight = settings.expandedHeight
         let newWidth = settings.expandedWidth
@@ -119,8 +119,7 @@ class NotchOverlayWindow: NSWindow {
     }
     
     func collapse() {
-        let screen = NotchOverlayWindow.getBuiltInScreen()
-        let screenFrame = screen.frame
+        let screenFrame = targetScreen.frame
         
         let newFrame = NSRect(
             x: screenFrame.origin.x + (screenFrame.width - notchWidth) / 2,
